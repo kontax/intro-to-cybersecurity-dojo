@@ -4,7 +4,7 @@ name: Intro to Cybersecurity
 award:
   belt: orange
 
-image: pwncollege/challenge-legacy:latest
+image: couldinho/challenge-legacy:latest
 
 description: |
   Can you feel it?
@@ -15,196 +15,194 @@ description: |
 type: topic
 
 modules:
+  - id: talking-web
 
-- id: talking-web
+  - id: web-security
 
-- id: web-security
+  - id: intercepting-communication
+    name: Intercepting Communication
+    description: Learn various techniques to intercept and manipulate network communication, from connecting to remote hosts to performing man-in-the-middle attacks.
+    challenges:
+      - id: level-1
+        name: level1
+        description: Connect to a remote host
+      - id: level-2
+        name: level2
+        description: Listen for a connection from a remote host
+      - id: level-3
+        name: level3
+        description: Find and connect to a remote host
+      - id: level-4
+        name: level4
+        description: Find and connect to a remote host on a large network
+      - id: level-5
+        name: level5
+        description: Monitor traffic from a remote host
+      - id: level-6
+        name: level6
+        description: Monitor slow traffic from a remote host
+      - id: level-7
+        name: level7
+        description: Hijack traffic from a remote host by configuring your network interface
+      - id: level-8
+        name: level8
+        description: Manually send an Ethernet packet
+      - id: level-9
+        name: level9
+        description: Manually send an Internet Protocol packet
+      - id: level-10
+        name: level10
+        description: Manually send a Transmission Control Protocol packet
+      - id: level-11
+        name: level11
+        description: Manually perform a Transmission Control Protocol handshake
+      - id: level-12
+        name: level12
+        description: Manually send an Address Resolution Protocol packet
+      - id: level-13
+        name: level13
+        description: Hijack traffic from a remote host using ARP
+      - id: level-14
+        name: level14
+        description: Man-in-the-middle traffic between two remote hosts and inject extra traffic
+    resources:
+      - name: "Intercepting Communication: Introduction"
+        type: lecture
+        video: TLJHimgblCM
+        playlist: PL-ymxv0nOtqrrjUFj5DL7jby9xA4sPFq-
+        slides: 1fj5anIxRY3haHl81dFWwwCMQhJCUEY-NrTClwYH9_iE
+      - name: "Intercepting Communication: Ethernet"
+        type: lecture
+        video: TaPsmkBNJ64
+        playlist: PL-ymxv0nOtqrrjUFj5DL7jby9xA4sPFq-
+        slides: 1OFdRsadX7HaLVtrVC5rV8837W8FY83Qzca5OIhhade0
+      - name: "Intercepting Communication: Internet Protocol"
+        type: lecture
+        video: _3F7lRUoIXM
+        playlist: PL-ymxv0nOtqrrjUFj5DL7jby9xA4sPFq-
+        slides: 1fiTAFWX-ASikEFD1QRmgangaUzLvE2Ym7UlSjVnx4Oc
+      - name: "Intercepting Communication: Transmission Control Protocol"
+        type: lecture
+        video: v3m9F9nEpCA
+        playlist: PL-ymxv0nOtqrrjUFj5DL7jby9xA4sPFq-
+        slides: 1ALXCLKkbGgzOJ0qrCGD-UekGOGjzH74tLAaZLw4CvWc
+      - name: "Intercepting Communication: Address Resolution Protocol"
+        type: lecture
+        video: 9p2OU4r4aGs
+        playlist: PL-ymxv0nOtqrrjUFj5DL7jby9xA4sPFq-
+        slides: 1VoEUlgjCNZuNIdh8KSxF6bTXPr1ylaeokwFDOLk7F94
+      - name: "Tooling Documentation"
+        type: markdown
+        content: |
+          - [man page: `nc`](https://linux.die.net/man/1/nc)
+          - [man page: `ip`](https://linux.die.net/man/8/ip)
+          - [man page: `tcpdump`](https://linux.die.net/man/8/tcpdump)
+          - [Cheat Sheet For `ip` Command](https://access.redhat.com/sites/default/files/attachments/rh_ip_command_cheatsheet_1214_jcs_print.pdf)
+          - [Wireshark User's Guide](https://www.wireshark.org/docs/wsug_html_chunked/)
+          - [Scapy's Documentation](https://scapy.readthedocs.io/en/latest/)
 
-- id: intercepting-communication
-  name: Intercepting Communication
-  description: Learn various techniques to intercept and manipulate network communication, from connecting to remote hosts to performing man-in-the-middle attacks.
-  challenges:
-  - id: level-1
-    name: level1
-    description: Connect to a remote host
-  - id: level-2
-    name: level2
-    description: Listen for a connection from a remote host
-  - id: level-3
-    name: level3
-    description: Find and connect to a remote host
-  - id: level-4
-    name: level4
-    description: Find and connect to a remote host on a large network
-  - id: level-5
-    name: level5
-    description: Monitor traffic from a remote host
-  - id: level-6
-    name: level6
-    description: Monitor slow traffic from a remote host
-  - id: level-7
-    name: level7
-    description: Hijack traffic from a remote host by configuring your network interface
-  - id: level-8
-    name: level8
-    description: Manually send an Ethernet packet
-  - id: level-9
-    name: level9
-    description: Manually send an Internet Protocol packet
-  - id: level-10
-    name: level10
-    description: Manually send a Transmission Control Protocol packet
-  - id: level-11
-    name: level11
-    description: Manually perform a Transmission Control Protocol handshake
-  - id: level-12
-    name: level12
-    description: Manually send an Address Resolution Protocol packet
-  - id: level-13
-    name: level13
-    description: Hijack traffic from a remote host using ARP
-  - id: level-14
-    name: level14
-    description: Man-in-the-middle traffic between two remote hosts and inject extra traffic
-  resources:
-  - name: "Intercepting Communication: Introduction"
-    type: lecture
-    video: TLJHimgblCM
-    playlist: PL-ymxv0nOtqrrjUFj5DL7jby9xA4sPFq-
-    slides: 1fj5anIxRY3haHl81dFWwwCMQhJCUEY-NrTClwYH9_iE
-  - name: "Intercepting Communication: Ethernet"
-    type: lecture
-    video: TaPsmkBNJ64
-    playlist: PL-ymxv0nOtqrrjUFj5DL7jby9xA4sPFq-
-    slides: 1OFdRsadX7HaLVtrVC5rV8837W8FY83Qzca5OIhhade0
-  - name: "Intercepting Communication: Internet Protocol"
-    type: lecture
-    video: _3F7lRUoIXM
-    playlist: PL-ymxv0nOtqrrjUFj5DL7jby9xA4sPFq-
-    slides: 1fiTAFWX-ASikEFD1QRmgangaUzLvE2Ym7UlSjVnx4Oc
-  - name: "Intercepting Communication: Transmission Control Protocol"
-    type: lecture
-    video: v3m9F9nEpCA
-    playlist: PL-ymxv0nOtqrrjUFj5DL7jby9xA4sPFq-
-    slides: 1ALXCLKkbGgzOJ0qrCGD-UekGOGjzH74tLAaZLw4CvWc
-  - name: "Intercepting Communication: Address Resolution Protocol"
-    type: lecture
-    video: 9p2OU4r4aGs
-    playlist: PL-ymxv0nOtqrrjUFj5DL7jby9xA4sPFq-
-    slides: 1VoEUlgjCNZuNIdh8KSxF6bTXPr1ylaeokwFDOLk7F94
-  - name: "Tooling Documentation"
-    type: markdown
-    content: |
-      - [man page: `nc`](https://linux.die.net/man/1/nc)
-      - [man page: `ip`](https://linux.die.net/man/8/ip)
-      - [man page: `tcpdump`](https://linux.die.net/man/8/tcpdump)
-      - [Cheat Sheet For `ip` Command](https://access.redhat.com/sites/default/files/attachments/rh_ip_command_cheatsheet_1214_jcs_print.pdf)
-      - [Wireshark User's Guide](https://www.wireshark.org/docs/wsug_html_chunked/)
-      - [Scapy's Documentation](https://scapy.readthedocs.io/en/latest/)
+  - id: cryptography
 
-- id: cryptography
+  - id: access-control
+    name: Access Control
+    description: Exploit various access control issues for the POSIX/UNIX Discretionary Access Control model and answer questions about Mandatory Access Control models.
+    visibility:
+      start: "2023-11-08T22:00:00-00:00"
+    challenges:
+      - id: level-1
+        name: level1
+        description: Flag owned by you with different permissions
+      - id: level-2
+        name: level2
+        description: Flag owned by you with different permissions
+      - id: level-3
+        name: level3
+        description: Flag owned by you with different permissions
+      - id: level-4
+        name: level4
+        description: How does SETUID work?
+      - id: level-5
+        name: level5
+        description: How does SETUID and cp work?
+      - id: level-6
+        name: level6
+        description: Flag owned by a different group
+      - id: level-7
+        name: level7
+        description: Flag owned by you with different permissions, multiple users
+      - id: level-8
+        name: level8
+        description: Flag owned by other users
+      - id: level-9
+        name: level9
+        description: Flag owned by other users
+      - id: level-10
+        name: level10
+        description: Flag owned by a group
+      - id: level-11
+        name: level11
+        description: Find the flag using multiple users
+      - id: level-12
+        name: level12
+        description: Find the flag using multiple users
+      - id: level-13
+        name: level13
+        description: One Mandatory Access Control question without categories
+      - id: level-14
+        name: level14
+        description: Five Mandatory Access Control questions without categories
+      - id: level-15
+        name: level15
+        description: One Mandatory Access Control question with categories
+      - id: level-16
+        name: level16
+        description: Five Mandatory Access Control questions with categories
+      - id: level-17
+        name: level17
+        description: Automate answering 20 Mandatory Access Control questions with categories in one second
+      - id: level-18
+        name: level18
+        description: Automate answering 64 Mandatory Access Control questions with categories in one second
+      - id: level-19
+        name: level19
+        description: Automate Answering 128 Mandatory Access Control questions with random levels and categories in one second
 
-- id: access-control
-  name: Access Control
-  description: Exploit various access control issues for the POSIX/UNIX Discretionary Access Control model and answer questions about Mandatory Access Control models.
-  visibility:
-    start: "2023-11-08T22:00:00-00:00"
-  challenges:
-    - id: level-1
-      name: level1
-      description: Flag owned by you with different permissions
-    - id: level-2
-      name: level2
-      description: Flag owned by you with different permissions
-    - id: level-3
-      name: level3
-      description: Flag owned by you with different permissions
-    - id: level-4
-      name: level4
-      description: How does SETUID work?
-    - id: level-5
-      name: level5
-      description: How does SETUID and cp work?
-    - id: level-6
-      name: level6
-      description: Flag owned by a different group
-    - id: level-7
-      name: level7
-      description: Flag owned by you with different permissions, multiple users
-    - id: level-8
-      name: level8
-      description: Flag owned by other users
-    - id: level-9
-      name: level9
-      description: Flag owned by other users
-    - id: level-10
-      name: level10
-      description: Flag owned by a group
-    - id: level-11
-      name: level11
-      description: Find the flag using multiple users
-    - id: level-12
-      name: level12
-      description: Find the flag using multiple users
-    - id: level-13
-      name: level13
-      description: One Mandatory Access Control question without categories
-    - id: level-14
-      name: level14
-      description: Five Mandatory Access Control questions without categories
-    - id: level-15
-      name: level15
-      description: One Mandatory Access Control question with categories
-    - id: level-16
-      name: level16
-      description: Five Mandatory Access Control questions with categories
-    - id: level-17
-      name: level17
-      description: Automate answering 20 Mandatory Access Control questions with categories in one second
-    - id: level-18
-      name: level18
-      description: Automate answering 64 Mandatory Access Control questions with categories in one second
-    - id: level-19
-      name: level19
-      description: Automate Answering 128 Mandatory Access Control questions with random levels and categories in one second
+    resources:
+      - name: "Access Control: Introduction"
+        type: lecture
+        video: mdWa1SHkxmM
+        playlist: PL-ymxv0nOtqotjW-uK_YSj9pm5tTKf87J
+        slides: 1tBn2d4d7-kpaoAoEipts8ZqKhQsIsSvF
+      - name: "Access Control: Modeling Access Control"
+        type: lecture
+        video: Nq93Xz6yn3o
+        playlist: PL-ymxv0nOtqotjW-uK_YSj9pm5tTKf87J
+        slides: 1xGkSmpJBt4IMg2aW2vSoY5b0qHqF2t4h
+      - name: "Access Control: Implementing Access Control"
+        type: lecture
+        video: OGhKjwJ7PKE
+        playlist: PL-ymxv0nOtqotjW-uK_YSj9pm5tTKf87J
+        slides: 1D9C4dtWdsub504eGyzr0JEpOmwH4X8UJ
+      - name: "Access Control: POSIX Access Control"
+        type: lecture
+        video: OG5yXzn-cVs
+        playlist: PL-ymxv0nOtqotjW-uK_YSj9pm5tTKf87J
+        slides: 172XbD83EW8kZIHHZIbXVOmbDMYRm-VN1
+      - name: "Access Control: Types of Access Control"
+        type: lecture
+        video: b20SKFOI4Zo
+        playlist: PL-ymxv0nOtqotjW-uK_YSj9pm5tTKf87J
+        slides: 1dK3DNUznDqw0ddR-bYUgf7nHHTu9XhaE
+      - name: "Access Control: Mandatory Access Control"
+        type: lecture
+        video: e72S-sS9xDo
+        playlist: PL-ymxv0nOtqotjW-uK_YSj9pm5tTKf87J
+        slides: 12np5WiQv_h3VJTt7XMaYqb4ZkEoGpLM-
+      - name: "Access Control: Getting Started"
+        type: lecture
+        video: snDd4W0QnZo
+        playlist: PL-ymxv0nOtqotjW-uK_YSj9pm5tTKf87J
 
-  resources:
-  - name: "Access Control: Introduction"
-    type: lecture
-    video: mdWa1SHkxmM
-    playlist: PL-ymxv0nOtqotjW-uK_YSj9pm5tTKf87J
-    slides: 1tBn2d4d7-kpaoAoEipts8ZqKhQsIsSvF
-  - name: "Access Control: Modeling Access Control"
-    type: lecture
-    video: Nq93Xz6yn3o
-    playlist: PL-ymxv0nOtqotjW-uK_YSj9pm5tTKf87J
-    slides: 1xGkSmpJBt4IMg2aW2vSoY5b0qHqF2t4h
-  - name: "Access Control: Implementing Access Control"
-    type: lecture
-    video: OGhKjwJ7PKE
-    playlist: PL-ymxv0nOtqotjW-uK_YSj9pm5tTKf87J
-    slides: 1D9C4dtWdsub504eGyzr0JEpOmwH4X8UJ
-  - name: "Access Control: POSIX Access Control"
-    type: lecture
-    video: OG5yXzn-cVs
-    playlist: PL-ymxv0nOtqotjW-uK_YSj9pm5tTKf87J
-    slides: 172XbD83EW8kZIHHZIbXVOmbDMYRm-VN1
-  - name: "Access Control: Types of Access Control"
-    type: lecture
-    video: b20SKFOI4Zo
-    playlist: PL-ymxv0nOtqotjW-uK_YSj9pm5tTKf87J
-    slides: 1dK3DNUznDqw0ddR-bYUgf7nHHTu9XhaE
-  - name: "Access Control: Mandatory Access Control"
-    type: lecture
-    video: e72S-sS9xDo
-    playlist: PL-ymxv0nOtqotjW-uK_YSj9pm5tTKf87J
-    slides: 12np5WiQv_h3VJTt7XMaYqb4ZkEoGpLM-
-  - name: "Access Control: Getting Started"
-    type: lecture
-    video: snDd4W0QnZo
-    playlist: PL-ymxv0nOtqotjW-uK_YSj9pm5tTKf87J
+  - id: reverse-engineering
 
-
-- id: reverse-engineering
-
-- id: binary-exploitation
+  - id: binary-exploitation
